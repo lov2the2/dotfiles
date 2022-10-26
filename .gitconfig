@@ -1,0 +1,23 @@
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[user]
+	name = lov2the2
+	email = lov2the2@gmail.com
+	signignkey = C4F9C757F830678D
+[core]
+	excludesfile = /Users/crazyjune/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/crazyjune/.stCommitMsg
+[credential]
+	helper = store
+[init]
+	defaultBranch = main
