@@ -143,12 +143,37 @@ if [ ! -e ~/.aws ] ; then `ln -s ${HOME}/.dotfiles/.aws ~/.aws` ; fi
 if [ ! -e ~/.ssh ] ; then `ln -s ${HOME}/.dotfiles/.ssh ~/.ssh` ; fi
 if [ ! -e ~/.kube ] ; then `ln -s ${HOME}/.dotfiles/.kube ~/.kube` ; fi
 if [ ! -e ~/.gnupg ] ; then `ln -s ${HOME}/.dotfiles/.gnupg ~/.gnupg` ; fi
+if [ ! -e ~/Workspace ] ; then `ln -s ${HOME}/iCloud/Workspace ~/Workspace` ; fi
 
 ##### CUSTOM EXEC END
 #####################
 #
 #####################
 ##### CUSTOM ALIAS
+alias cat="bat"
+alias _cat="/bin/cat"
+
+export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
+
+fpath=(/usr/local/share/zsh-completions $fpath)
+
+## STUDY
+alias STUDY='cd ${HOME}/Workspace/github.com/private-junseok/Study'
+
+## k9s --readonly option
+alias k9sr="k9s --readonly"
+
+# README-MD-GENERATOR
+# https://github.com/kefranabg/readme-md-generator
+alias readme='npx readme-md-generator'
+
+# for brew services
+alias bss='brew services '
+alias brewup='brew udgrade;brew update'
+# Homebrew log
+alias brewlog="cd ${HOME}/Library/Logs/Homebrew"
+
+alias bbb="brew update ; brew upgrade ; brew cleanup"
 
 ## bare git .dotfiles
 alias _dotfiles=`which git`' --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}'
@@ -156,6 +181,9 @@ alias _dotfiles=`which git`' --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}'
 ## kubernetes
 alias k='kubectl'
 export KUBE_EDITOR="/opt/homebrew/bin/nvim"
+
+###### WORK
+alias WORK='cd ${HOME}/Workspace/Work'
 
 ##### CUSTOM ALIAS END
 #####################
