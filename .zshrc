@@ -143,6 +143,8 @@ if [ ! -e ~/.aws ] ; then `ln -s ${HOME}/.dotfiles/.aws ~/.aws` ; fi
 if [ ! -e ~/.ssh ] ; then `ln -s ${HOME}/.dotfiles/.ssh ~/.ssh` ; fi
 if [ ! -e ~/.kube ] ; then `ln -s ${HOME}/.dotfiles/.kube ~/.kube` ; fi
 if [ ! -e ~/.gnupg ] ; then `ln -s ${HOME}/.dotfiles/.gnupg ~/.gnupg` ; fi
+if [ ! -e ~/.SpaceVim ] ; then `ln -s ${HOME}/.dotfiles/.SpaceVim ~/.SpaceVim` ; fi
+if [ ! -e ~/.oh-my-zsh ] ; then `ln -s ${HOME}/.dotfiles/.oh-my-zsh ~/.oh-my-zsh` ; fi
 if [ ! -e ~/Workspace ] ; then `ln -s ${HOME}/iCloud/Workspace ~/Workspace` ; fi
 
 ##### CUSTOM EXEC END
